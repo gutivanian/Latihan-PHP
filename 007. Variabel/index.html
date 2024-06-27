@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variabel</title>
+</head>
+<body>
+    <h1>Variabel</h1>
+    <p>
+        Variabel adalah tempat untuk menyimpan data sehingga bisa digunakan lagi di program selanjutnya. Di PHP, variabel bisa menampung berbagai jenis tipe data dan bisa berubah ubah tipedatanya. Untuk membuat variabel, kita bisa menggunakan tanda "$" dollar diikuti dengan nama variabelnya. Penamaan variabel tidak boleh mengandung spasi. 
+    </p>
+    <pre>
+        &lt;?php
+            $name = "Eko";
+            $age = 30;
+
+            echo "Name: ";
+            echo $name;
+            echo "\n";
+            echo "Age: ";
+            echo $age;
+    </pre>
+
+    <h2>Variabel dari Variabel</h2>
+    <p>
+        PHP memiliki kemampuan "variable variables", yaitu membuat variabel dari nilai string variabel. Walaupun fitur ini ada, ini jarang digunakan karena cukup membingungkan. Untuk menggunakannya, gunakan dollar ganda $$ diikuti dengan nama variabel.
+    </p>
+    <pre>
+        &lt;?php
+            $nama = "Saya";
+            $$nama = "Anda";
+
+            echo "\$name = ";
+            echo $nama;
+            echo "\n";
+            echo "\$Saya = ";
+            echo $Saya;  
+    </pre>
+
+
+
+
+
+
+
+
+</body>
+</html>

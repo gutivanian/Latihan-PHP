@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String</title>
+</head>
+<body>
+    <h1>String</h1>
+    <p>
+        Tipe data string adalah tipe data representasi dari teks. String bisa mengandung string kosong atau teks. Penulisan string bisa menggunakan kutip satu atau kutip dua. 
+    </p>
+    <pre>
+        &lt;?php
+            echo "ini string";
+            echo "Ini juga string 2";
+            echo '';
+    </pre>
+    <p>
+        Kelebihan menggunakan kutip dua, kita bisa menggunakan "escape sequence", seperti "\n" untuk enter atau "\t" untuk tab. 
+    </p>
+    <pre>
+        &lt;?php
+            echo "ini \n enter";
+            echo "ini \t tab";
+            echo "ini \" dikutip \"";
+    </pre>
+
+    <h2>Multiline String</h2>
+    <p>
+        Kadang kita ingin membuat data string yang lebih dari satu baris. Untuk melakukannya, kita bisa menggunakan "\n". Namun php memiliki fitur berguna bernama "Heredoc" dan "Nowdoc".
+    </p>
+    <h3>Heredoc</h3>
+    <p>
+        Heredoc adalah fitur untuk membuat teks panjang, sehingga kita tidak perlu manual melakukan enter tab dan lainnya. Cara penulisan heredoc adalah dengan "&lt;&lt;&lt; NamaTeks" kemudian enter dan diisi teksnya lalu diakhiri dengan namateks kembali.
+    </p>
+    <pre>
+        &lt;?php
+            echo &lt;&lt;&lt;TEKS
+            ini adalah teks yang sangat panjang. 
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, velit fugit? Impedit optio consectetur ipsa possimus accusantium perspiciatis corrupti cum, assumenda, perferendis deleniti placeat quae sint quam quisquam error suscipit.
+            TEKS;
+    </pre>
+
+    <h3>Nowdoc</h3>
+    <p>
+        Nowdoc adalah fitur yang sama dengan Heredoc, hanya saja nowdoc tidak dapat menggunakan "escape sequence". Untuk nowdoc, nama teks diapit petik satu.
+    </p>
+    <pre>
+        &lt;?php
+            echo &lt;&lt;&lt;'TEKS'
+            ini adalah teks yang sangat panjang. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, velit fugit? Impedit optio consectetur ipsa possimus accusantium perspiciatis corrupti cum, assumenda, perferendis deleniti placeat quae sint quam quisquam error suscipit.
+            TEKS;
+    </pre>
+
+
+</body>
+</html>

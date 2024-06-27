@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Null</title>
+</head>
+<body>
+    <h1>Null</h1>
+    <p>
+        Nilai NULL merepresentasikan sebuah variabel tanpa nilai. Saat kita membuat variabel, lalu ingin menghapus data yang terdapat di variabel tersebut, kita bisa menggunakan NULL untuk mengosongkan nilai tersebut. Untuk membuat data NULL, kita bisa menggunakan kata kunci NULL (case insensitive).
+    </p>
+    <pre>
+        &lt;?php
+            $nama = "Saya";
+            echo "Nama = ";
+            echo $nama;
+            $nama = null;
+            echo $nama; //tidak menampilkan nilai di console.
+    </pre>
+
+    <h2>Mengecek apakah data kosong atau tidak</h2>
+    <p>
+        Kadang kita ingin tahu apakah sebuah data bernilai null atau tidak. Untuk mengecek apakah sebuah data bernilai null, kita bisa menggunakan fungsi "is_null($variabel)". Hasil dari is_null akan 0 atau 1, 0 jika false dan 1 jika true. 
+    </p>
+    <pre>
+        &lt;?php
+            $nama = "Nama";
+            $umur = null;
+            echo "Apakah nama null? ";
+            echo is_null($nama);
+            echo "\n Apakah umur null? ";
+            echo is_null($umur);
+    </pre>
+
+    <h2>Menghapus Variabel</h2>
+    <p>
+        Selain mengubah menjadi null, di PHP juga dapat menghapus sebuah variabel, caranya dengan fungsi unset($variabel). Namun perlu hati-hati bahwa ketika kita hapus variabel, kita tidak akan bisa mengakses variabel itu lagi. Bahkan fungsi is_null($variabel) akan melemparkan error. Agar lebih aman, kita bisa menggunakan fungsi isset($variabel) untuk mengecek apakah variabel ada dan nilainya tidak null.
+    </p>
+    <pre>
+        &lt;?php
+            $nama = "Saya";
+            echo "Namanya adalah ";
+            echo $nama;
+            echo "\n Variabel apakah ada ?";
+            echo isset($nama);
+            // akan menghasilkan error karena variabel dihapus/tidak lagi didefinisikan
+            unset($nama);
+            echo "\n Namanya adalah ";
+            echo $nama;
+            echo "\n Variabel apakah ada? ";
+            echo var_dump(isset($nama));
+    </pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipe Data Number</title>
+</head>
+<body>
+    <h1>Tipe Data Number</h1>
+    <p>
+        Di PHP terdapat 2 jenis tipe data number:
+    </p>
+    <ol>
+        <li>(int) yaitu bilangan desimal basis 10, heksadesimal basis 16, oktal basis 8, dan biner basis 2</li>
+        <li>(float) Bilangan pecahan atau koma</li>
+    </ol>
+    <p>
+        Di PHP kita bisa menambahkan "_"(garis bawah) di angka. Ini hanya untuk agar mudah dibaca dan saat dijalankan tanda "_" akan diabaikan. Untuk tanda negatif, bisa gunakan "-" (minus).
+    </p>
+    <pre>
+        &lt;?php
+            echo "Decimal:";
+            var_dump(1234);
+            // var_dump untuk mengecek tipe data
+            echo "Octal:";
+            var_dump(01234);
+            echo "Hexadecimal:";
+            var_dump(0x1A);
+            echo "Binary: ";
+            var_dump(0b1101);
+            echo "Underscore di number:";
+            var_dump(1_234_567);
+    </pre>
+
+    <h2>Floating</h2>
+    <p>
+        Untuk membuat floating point, gunakan titik "."
+    </p>
+    <pre>
+        &lt;?php
+            echo "Float:";
+            var_dump(1.234);
+            echo "Float untu E sebagai 10 pangkat:";
+            var_dump(123E4);
+            echo "Float untu E sebagai 10 pangkat:";
+            var_dump(123E-8);
+            echo "Underscore di float number:";
+            var_dump(1_234.567);
+    </pre>
+
+    <h2>Integer Overflow</h2>
+    <p>
+        Secara default, kapasitas integer di PHP ada batasnya, 2147483647 untuk sistem operasi 32 bit dan 9223372036854775807 untuk sistem operasi 64 bit. Jika kita membuat bilangan int yang melebihi nilai ini, maka tipe numbernya akan berubah menjadi float. 
+    </p>
+    <pre>
+        &lt;?php
+            echo 'Integer overflow 32 bit:';
+            var_dump(2147483648);
+            echo 'Integer overflow 64 bit:';
+            var_dump(9223372036854775808);
+    </pre>
+
+
+
+
+</body>
+</html>
